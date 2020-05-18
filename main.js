@@ -1,6 +1,3 @@
-var userPlay = prompt("rock, paper or scissor?");
-document.write(userPlay);
-
 var computerPlay = Math.random();
 
 if (computerPlay < .33){
@@ -11,34 +8,46 @@ if (computerPlay < .33){
     computerPlay = 'scissor';
 }
 
-console.log(computerPlay);
+function game(){
 
-function playRound(playerSelection, computerSelection){
-    if(playerSelection === computerSelection) {
-        return "Game was a tie"
-    } else if(playerSelection === "rock"){
-        if(computerSelection === "paper"){
-            return "you lose! paper beats rock"
-        } else if(computerSelection === "scissor"){
-            return "You win! rock beats scissor"
+    let userPlay = prompt("rock, paper or scissor?");
+
+    function playRound(playerSelection, computerSelection){
+        if(playerSelection === computerSelection) {
+            return "Game was a tie"
+        } else if(playerSelection === "rock"){
+            if(computerSelection === "paper"){
+                return "you lose! paper beats rock"
+            } else if(computerSelection === "scissor"){
+                return "You win! rock beats scissor"
+            }
+        } 
+        else if(playerSelection==="paper"){
+            if(computerSelection==="rock"){
+                return "you win! paper beats rock"
+            } else if (computerSelection==="scissor"){
+                return "you lose! scissor beats paper"
+            }
         }
-    } 
-    else if(playerSelection==="paper"){
-        if(computerSelection==="rock"){
-            return "you win! paper beats rock"
-        } else if (computerSelection==="scissor"){
-            return "you lose! scissor beats paper"
+        else if (playerSelection==="scissor"){
+            if(computerSelection==="rock"){
+                return "you lose! rock beats scissor"
+            } else if(computerSelection==="paper"){
+                return "you win! scissor beats paper"
+            }
+        } else{
+            return "please enter the right choice"
         }
     }
-    else if (playerSelection==="scissor"){
-        if(computerSelection==="rock"){
-            return "you lose! rock beats scissor"
-        } else if(computerSelection==="paper"){
-            return "you win! scissor beats paper"
-        }
-    } else{
-        return "please enter the right choice"
-    }
+
+
+    console.log(computerPlay)
+    console.log(playRound(userPlay, computerPlay));
+    
 }
 
-console.log(playRound(userPlay, computerPlay));
+console.log(game());
+console.log(game());
+console.log(game());
+
+
