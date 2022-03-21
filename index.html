@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
-    <title>Document</title>
+    <title>Rock paper scissor game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="demo">This is javaScript Game</h1>
+<!-- This is the Header -->
+
+    <header>
+        <h1>Rock Paper Scissor</h1>
+        </header>
+
+        <!-- score bord -->
+
+    <div class="score_bord">
+            <span id = "userScore">0</span>:<span id="computerScore">0</span>
+        <div class="user">user</div>
+        <div class="computer">comput</div>
+
+    </div>
+
+    <!-- result section -->
+    <div class="result">
+        <p id="result">The winner to be shown here</p>
+    </div>
+    <!-- choices section -->
+    <div class="choices">
+        <div id = "rock" class="choice">
+            <img src="images/rock.png" alt="icon hand rock">
+        </div>
+        <div id=" paper" class="choice">
+            <img src="images/paper.png" alt="icon paper" width="48px">
+        </div>
+        <div id="scissor" class="choice">
+            <img src="images/scissor.png" alt="icon scossor" width="48px">
+        </div>
+    </div>
+    <!-- make your move -->
+    <div class="last">
+        <p>Make your move</p>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
